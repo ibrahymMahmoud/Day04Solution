@@ -28,6 +28,22 @@
     ///        y = x;
     ///        x = temp;
     ///    }
+    ///    
+
+        //function with Ref prameters
+        //create function to sum array elements and change first element
+     ///   static int Sum(int[] array) {
+     ///       int sum = 0;
+     ///       if (array != null) { 
+     ///           array[0] = 100;
+     ///           for (int i = 0; i < array.Length; i++)
+     ///           {
+     ///               sum += array[i];
+     ///           }
+     ///       }
+     ///       return sum ;
+     ///   
+     ///   }
         static void Main(string[] args)
         {
             #region Function(protoType,calling)
@@ -65,18 +81,28 @@
             //1.value type
             //2. referance type
 
-        ///    int a = 5;
-        ///    int b =8;
-        ///    Console.WriteLine(" before swaping");
-        ///    Console.WriteLine($" a= {a}");
-        ///    Console.WriteLine($" b= {b}");  
-        ///    SwapingByValue(a, b);
-        ///    Console.WriteLine($" a= {a}");
-        ///    Console.WriteLine($" b= {b}");
-        ///    SwapingByRef(ref a,ref b);
-        ///    Console.WriteLine($" a= {a}");
-        ///    Console.WriteLine($" b= {b}");
-           
+            ///    int a = 5;
+            ///    int b =8;
+            ///    Console.WriteLine(" before swaping");
+            ///    Console.WriteLine($" a= {a}");
+            ///    Console.WriteLine($" b= {b}");  
+            ///    SwapingByValue(a, b);
+            ///    Console.WriteLine($" a= {a}");
+            ///    Console.WriteLine($" b= {b}");
+            ///    SwapingByRef(ref a,ref b);
+            ///    Console.WriteLine($" a= {a}");
+            ///    Console.WriteLine($" b= {b}");
+
+            #endregion
+
+            #region function Ref type prameter example
+            // no different between call by Ref and by value with Ref prameter 
+            //but behavior is different
+          ///  int[] array = { 1 ,5,8,10,20 };
+          ///  int sum = Sum(array);
+          ///  Console.WriteLine($"the sum of array : {sum}");
+          ///  Console.WriteLine($"the first element in  array : {array[0]}");
+
             #endregion
         }
     }
