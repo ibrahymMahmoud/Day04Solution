@@ -47,41 +47,56 @@
         ///   
 
         //create function to sum array elements and change on new array element
-      ///       static int SumByvalue(int[] array) {
-      ///           int sum = 0;
-      ///           if (array != null) { 
-      ///               array= new [] {3,5,11,14};
-      ///               for (int i = 0; i < array.Length; i++)
-      ///               {
-      ///                   sum += array[i];
-      ///               }
-      ///           }
-      ///           return sum ;
-      ///       
-      ///       }
-      ///
-      ///  static int SumByRef(int[] array)
+        ///       static int SumByvalue(int[] array) {
+        ///           int sum = 0;
+        ///           if (array != null) { 
+        ///               array= new [] {3,5,11,14};
+        ///               for (int i = 0; i < array.Length; i++)
+        ///               {
+        ///                   sum += array[i];
+        ///               }
+        ///           }
+        ///           return sum ;
+        ///       
+        ///       }
+        ///
+        ///  static int SumByRef(int[] array)
+        ///  {
+        ///      int sum = 0;
+        ///      if (array != null)
+        ///      {
+        ///          array = new[] { 3, 5, 3, 5 };
+        ///          for (int i = 0; i < array.Length; i++)
+        ///          {
+        ///              sum += array[i];
+        ///          }
+        ///      }
+        ///      return sum;
+        ///
+        ///  }
+
+        ///  //create function take two integer and return sum and mul
+        ///  static void calc(int a , int b , out int x , out int y) 
+        ///  {
+        ///      x=a +b;
+        ///      y = a * b;
+        ///  
+        ///  }
+        ///  
+
+        //can pass aray as element in call function
+        //if their prameter else must write before params
+        //(pass first)
+      ///  static int Sum(int x , int y , params int[] nums)
       ///  {
       ///      int sum = 0;
-      ///      if (array != null)
+      ///      for (int i = 0; i < nums.Length; i++)
       ///      {
-      ///          array = new[] { 3, 5, 3, 5 };
-      ///          for (int i = 0; i < array.Length; i++)
-      ///          {
-      ///              sum += array[i];
-      ///          }
+      ///
+      ///          sum += nums[i];
       ///      }
       ///      return sum;
-      ///
       ///  }
-        
-      ///  //create function take two integer and return sum and mul
-         ///  static void calc(int a , int b , out int x , out int y) 
-         ///  {
-         ///      x=a +b;
-         ///      y = a * b;
-         ///  
-         ///  }
         static void Main(string[] args)
         {
             #region Function(protoType,calling)
@@ -160,18 +175,26 @@
             #endregion
 
             #region passing by out
-              ///   int a = 5; int b=5;
-              ///   int x; int y;
-              ///   calc(a , b ,out x ,out y  );
-              ///   Console.WriteLine(x);
-              ///   Console.WriteLine(y);
-              ///   calc(a , b ,out _ ,out _  );
-                 
+            ///   int a = 5; int b=5;
+            ///   int x; int y;
+            ///   calc(a , b ,out x ,out y  );
+            ///   Console.WriteLine(x);
+            ///   Console.WriteLine(y);
+            ///   calc(a , b ,out _ ,out _  );
+
             /// if not need out put of function , can instead it put _
 
             #endregion
 
+            #region function params
+            /// int[] nums = { 1, 2, 3, 4, 5, 12};
+            /// Console.WriteLine(Sum(5,6,7,8,9,10));//pass as params
+            /// Console.WriteLine(Sum(5, 6,nums));//pass as array
+            /// 
+            //                                         0    1    2      3         4
+          ///Console.WriteLine("{0},{1},{2},{3},{4}","hello",45,"ahmed","mahmoud","ali");
 
+            #endregion
         }
     }
 }
