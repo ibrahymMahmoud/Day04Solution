@@ -10,6 +10,24 @@
       ///          Console.WriteLine(shape);
       ///      }
       ///  }
+      ///  
+      
+        //swap by pass value prameter
+    ///    static void SwapingByValue(int y , int x)
+    ///    {
+    ///        Console.WriteLine("swap - pass by value");
+    ///        int temp = y;
+    ///        y = x;
+    ///        x = temp;
+    ///    }
+    ///
+    ///    static void SwapingByRef(ref int y,ref int x)
+    ///    {
+    ///        Console.WriteLine("swap- pass by Ref");
+    ///        int temp = y;
+    ///        y = x;
+    ///        x = temp;
+    ///    }
         static void Main(string[] args)
         {
             #region Function(protoType,calling)
@@ -34,12 +52,31 @@
             ///    // to scape meaning of \ write before it \ as("hi\\hema") or @ before string like(@"hele\ya\yasta")
             ///    
 
-         ///   //call function 
-         ///   //PrintShape();//if want to use default prameters
-         ///   //PrintShape(5);//if want to use part of default prameters
-         ///   PrintShape(5, "-+-+-+-");//pass prameters by the same order
-         ///   PrintShape(shape : "+-+-+", count : 5);//pass by prameters name
-         ///
+            ///   //call function 
+            ///   //PrintShape();//if want to use default prameters
+            ///   //PrintShape(5);//if want to use part of default prameters
+            ///   PrintShape(5, "-+-+-+-");//pass prameters by the same order
+            ///   PrintShape(shape : "+-+-+", count : 5);//pass by prameters name
+            ///
+            #endregion
+
+            #region function value type prameter
+            //prameter of function
+            //1.value type
+            //2. referance type
+
+        ///    int a = 5;
+        ///    int b =8;
+        ///    Console.WriteLine(" before swaping");
+        ///    Console.WriteLine($" a= {a}");
+        ///    Console.WriteLine($" b= {b}");  
+        ///    SwapingByValue(a, b);
+        ///    Console.WriteLine($" a= {a}");
+        ///    Console.WriteLine($" b= {b}");
+        ///    SwapingByRef(ref a,ref b);
+        ///    Console.WriteLine($" a= {a}");
+        ///    Console.WriteLine($" b= {b}");
+           
             #endregion
         }
     }
