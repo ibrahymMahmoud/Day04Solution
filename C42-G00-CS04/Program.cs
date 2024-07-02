@@ -30,6 +30,15 @@
             }
         }
 
+        //Write a c# Function that accept 4 parameters from user
+        //and return result of summation and subtracting of two numbers
+
+        static void Calc (int x, int y , out int sum , out int abs)
+        {
+            sum = x +y;
+            abs = x - y;
+        }
+
         static void AddOneArrayElementByRef( ref int[] array)
         {
             for (int i = 0; i < array?.Length; i++)
@@ -97,6 +106,18 @@
             ///  AddOneArrayElementByValue(arr);
             ///  Console.WriteLine("\nafter pass by Reference");
             ///  AddOneArrayElementByRef(ref arr);
+
+
+            #endregion
+
+            #region Q3
+            //Write a c# Function that accept 4 parameters from user
+            //and return result of summation and subtracting of two numbers
+
+           /// int x = 10 ; int y = 5;
+           /// Calc(x, y, out int sum, out int abs);
+           /// Console.WriteLine($"sum = {sum}");
+           /// Console.WriteLine($"subtracting = {abs}");
 
 
             #endregion
