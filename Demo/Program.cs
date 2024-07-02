@@ -102,16 +102,54 @@
         //can pass aray as element in call function
         //if their prameter else must write before params
         //(pass first)
-      ///  static int Sum(int x , int y , params int[] nums)
-      ///  {
-      ///      int sum = 0;
-      ///      for (int i = 0; i < nums.Length; i++)
-      ///      {
-      ///
-      ///          sum += nums[i];
-      ///      }
-      ///      return sum;
-      ///  }
+        ///  static int Sum(int x , int y , params int[] nums)
+        ///  {
+        ///      int sum = 0;
+        ///      for (int i = 0; i < nums.Length; i++)
+        ///      {
+        ///
+        ///          sum += nums[i];
+        ///      }
+        ///      return sum;
+        ///  }
+
+        static void DoSomeCode()
+        {
+            int y;
+            int x;
+            int z;
+            y = int.Parse(Console.ReadLine());
+            x = int.Parse(Console.ReadLine());
+            z = y / x;
+
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            numbers[100] = 1;
+        }
+        // to make protective code
+
+        static void ProtectiveCode()
+        {
+            int y;
+            int x;
+            int z;
+            do
+            {
+                Console.WriteLine("Enter the first number");
+
+            } while (!int.TryParse(Console.ReadLine(), out y));
+            do
+            {
+                Console.WriteLine("Enter the second number");
+
+            } while (!int.TryParse(Console.ReadLine(), out x ) || x==0);
+           
+            z = y / x;
+
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            if(numbers?.Length > 100)
+                numbers[100] = 1;
+        }
+
         static void Main(string[] args)
         {
             #region Function(protoType,calling)
@@ -304,11 +342,11 @@
             #region Null propagation operator
 
             #region Example01
-         ///   int[] ? Numbers = [1,2,3,4,5];
-         ///   int ? length = Numbers?.Length ;
-         ///
-         ///   for (int i = 0; i < Numbers.Length; i++)
-         ///       Console.WriteLine(i);
+            ///   int[] ? Numbers = [1,2,3,4,5];
+            ///   int ? length = Numbers?.Length ;
+            ///
+            ///   for (int i = 0; i < Numbers.Length; i++)
+            ///       Console.WriteLine(i);
 
 
             #endregion
@@ -340,6 +378,33 @@
             #endregion
 
 
+            #endregion
+
+
+            #region Exception handling and protective code
+
+          ///  try
+          ///  {
+          ///      DoSomeCode();
+          ///  }
+          ///  catch (Exception ex)
+          ///  {
+          ///      Console.WriteLine(ex.Message);
+          ///  }finally
+          ///  {
+          ///      Console.WriteLine("finally occurs if and not if happen exception");
+          ///  }
+               /*Exception 
+                *   1.SystemException
+                *      1.FormatException
+                *      2.IndexOutOfRangeException
+                *      3.NullReferenceException
+                *      4.InvalidOperationException
+                *      5.ArithmeticException
+                *         5.1 DivideByZeroException
+                *         5.2 OverflowException
+                *   2.ApplicationException   
+                */
             #endregion
 
         }
