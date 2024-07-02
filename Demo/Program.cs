@@ -243,35 +243,50 @@
             #endregion
 
             #region part2
-         ///  int x =5;
-         ///  // x:int           -> allow integers only
-         ///  // y:Nullable<int> -> allow integers + null
-         ///  int? y = x;
-         ///
-         ///  // casting from int to Nullable<int> implicitly
-         ///  // safe casting
-         ///  //Console.WriteLine(y);
-         ///
-         ///  x =(int) y;
-         ///  //casting from Nullable<int> to int Explicitly
-         ///  //unsafe casting
-         ///
-         ///  //protective code
-         ///  if (y != null || y.HasValue) 
-         ///  {
-         ///      x = y.Value;
-         ///  }
-         ///  else
-         ///      x = 0;
-         ///
-         ///  x = y.HasValue ? y.Value : 0;
-         ///
-         ///  x = y ?? 0;  //?? --> Null coalescing Operator [synatax sugar]
+            ///  int x =5;
+            ///  // x:int           -> allow integers only
+            ///  // y:Nullable<int> -> allow integers + null
+            ///  int? y = x;
+            ///
+            ///  // casting from int to Nullable<int> implicitly
+            ///  // safe casting
+            ///  //Console.WriteLine(y);
+            ///
+            ///  x =(int) y;
+            ///  //casting from Nullable<int> to int Explicitly
+            ///  //unsafe casting
+            ///
+            ///  //protective code
+            ///  if (y != null || y.HasValue) 
+            ///  {
+            ///      x = y.Value;
+            ///  }
+            ///  else
+            ///      x = 0;
+            ///
+            ///  x = y.HasValue ? y.Value : 0;
+            ///
+            ///  x = y ?? 0;  //?? --> Null coalescing Operator [synatax sugar]
 
-            #endregion 
+            #endregion
 
 
             #endregion
+
+            #region Nullable reference types [ C# 10.0 (2021)]
+          ///  //null is a valid value for the variables of dataType:referenceType (class , interface)
+          ///  string message01 = null; // null is disable in project -- default
+          ///         message01 = null!;// null for business operator (once at this time)
+          ///  Console.WriteLine(message01);
+          ///
+          ///  string ? message02 = null; //? Nullable
+          ///  Console.WriteLine(message02);
+
+
+
+            #endregion
+
+
         }
     }
 }
