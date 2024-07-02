@@ -1,4 +1,6 @@
-﻿namespace C42_G00_CS04
+﻿using System.ComponentModel;
+
+namespace C42_G00_CS04
 {
     internal class Program
     {
@@ -49,6 +51,24 @@
             {
                 Console.Write(array[a] + " ");
             }
+        }
+
+        //Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
+        //Output should be like
+        //Enter a number: 25
+        //The sum of the digits of the number 25 is: 7
+
+        static int GetSumOfInteger (int number)
+        {
+            int sum =0;
+            while (number > 0)
+            {
+                sum += number % 10;
+                number /= 10;
+            }
+
+            return  sum;
+
         }
 
 
@@ -114,10 +134,28 @@
             //Write a c# Function that accept 4 parameters from user
             //and return result of summation and subtracting of two numbers
 
-           /// int x = 10 ; int y = 5;
-           /// Calc(x, y, out int sum, out int abs);
-           /// Console.WriteLine($"sum = {sum}");
-           /// Console.WriteLine($"subtracting = {abs}");
+            /// int x = 10 ; int y = 5;
+            /// Calc(x, y, out int sum, out int abs);
+            /// Console.WriteLine($"sum = {sum}");
+            /// Console.WriteLine($"subtracting = {abs}");
+
+
+            #endregion
+
+            #region Q4
+            //Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
+            //Output should be like
+            //Enter a number: 25
+            //The sum of the digits of the number 25 is: 7
+
+          ///  int num ;
+          ///  do
+          ///  {
+          ///      Console.Write("Enter the number: ");
+          ///  } while (!int.TryParse(Console.ReadLine(), out num) || num<=0);
+          ///  
+          ///  Console.WriteLine("the sum of integer: "+ GetSumOfInteger(num));
+
 
 
             #endregion
