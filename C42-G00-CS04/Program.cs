@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C42_G00_CS04
 {
@@ -68,6 +69,28 @@ namespace C42_G00_CS04
             }
 
             return  sum;
+
+        }
+
+        // Create a function named "IsPrime", which receives an integer number and
+        // retuns true if it is prime, or false if it is not:
+
+        static bool IsPrime(int number)
+        {
+            if (number <= 1)
+                return false;
+
+            if (number <= 3 )
+                return true;
+
+         
+            for (int i = 2 ; i < number/2 ; i++ )
+            {
+                if (number % i == 0 )
+                    return false;
+            }
+
+            return true;
 
         }
 
@@ -148,16 +171,30 @@ namespace C42_G00_CS04
             //Enter a number: 25
             //The sum of the digits of the number 25 is: 7
 
-          ///  int num ;
-          ///  do
-          ///  {
-          ///      Console.Write("Enter the number: ");
-          ///  } while (!int.TryParse(Console.ReadLine(), out num) || num<=0);
-          ///  
-          ///  Console.WriteLine("the sum of integer: "+ GetSumOfInteger(num));
+            ///  int num ;
+            ///  do
+            ///  {
+            ///      Console.Write("Enter the number: ");
+            ///  } while (!int.TryParse(Console.ReadLine(), out num) || num<=0);
+            ///  
+            ///  Console.WriteLine("the sum of integer: "+ GetSumOfInteger(num));
 
 
 
+            #endregion
+
+            #region Q5
+            // Create a function named "IsPrime", which receives an integer number and
+            // retuns true if it is prime, or false if it is not:
+
+        ///      int num ;
+        ///      do
+        ///      {
+        ///          Console.Write("Enter the number: ");
+        ///      } while (!int.TryParse(Console.ReadLine(), out num) );
+        ///      
+        ///      Console.WriteLine(" is prime: "+ IsPrime(num));
+           
             #endregion
 
 
