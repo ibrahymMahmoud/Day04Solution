@@ -192,7 +192,36 @@
             /// Console.WriteLine(Sum(5, 6,nums));//pass as array
             /// 
             //                                         0    1    2      3         4
-          ///Console.WriteLine("{0},{1},{2},{3},{4}","hello",45,"ahmed","mahmoud","ali");
+          Console.WriteLine("{0},{1},{2},{3},{4}","hello",45,"ahmed","mahmoud","ali");
+            Console.Read();
+
+            #endregion
+
+            #region Boxing ans unBoxing
+            //Boxing : casting from datatype [value type] to data type [reference type]
+            //unBoxing casting from datatype [reference type] to data type [value type]
+
+         /// object obj;
+            //declare for reference of type'OBJECT', refering to the default value of reference type null
+            //this reference will allocated at stack with size = 4 bytes
+            //this reference can refere to an instance of type object [or another type from "object"]
+
+          ///  obj=new object();
+          ///  obj = new string("hema");
+          ///  obj = "ibrahym";
+          ///
+          ///  obj = 'A'; // casting from char  [value type ] to object[reference type] ---> Boxing
+          ///  obj = 5;   // casting from int   [value type ] to object[reference type] ---> Boxing
+          ///  obj = 7.5; // casting from double[value type ] to object[reference type] ---> Boxing
+          ///  obj = true;// casting from bool  [value type ] to object[reference type] ---> Boxing  
+          ///             //boxing is implicitly
+          ///
+          ///
+          ///  char b = (char)obj;    // casting from object[reference type] to char  [value type ] ---> unBoxing
+          ///  int a = (int)obj;      // casting from object[reference type] to int   [value type ] ---> unBoxing
+          ///  double y= (double)obj; // casting from object[reference type] to double[value type ] ---> unBoxing
+          ///  bool flag = (bool)obj; // casting from object[reference type] to bool  [value type ] ---> unBoxing
+                                   //unboxing is explicitly // unsafe casting
 
             #endregion
         }
