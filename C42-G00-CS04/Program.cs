@@ -94,6 +94,21 @@ namespace C42_G00_CS04
 
         }
 
+        //Create a function named MinMaxArray,
+        //to return the minimum and maximum values stored in an array, using reference parameters
+        static void MinMaxArray( ref int[] array , out int max , out int min )
+        {
+             max = array[0];
+             min = array[0];
+            for (int i = 0;i < array?.Length;i++)
+            {
+                if (array[i]>max)
+                    max = array[i];
+                if(array[i]<min)
+                    min = array[i];
+            }
+        } 
+
 
         static void Main(string[] args)
         {
@@ -187,14 +202,28 @@ namespace C42_G00_CS04
             // Create a function named "IsPrime", which receives an integer number and
             // retuns true if it is prime, or false if it is not:
 
-        ///      int num ;
-        ///      do
-        ///      {
-        ///          Console.Write("Enter the number: ");
-        ///      } while (!int.TryParse(Console.ReadLine(), out num) );
-        ///      
-        ///      Console.WriteLine(" is prime: "+ IsPrime(num));
-           
+            ///      int num ;
+            ///      do
+            ///      {
+            ///          Console.Write("Enter the number: ");
+            ///      } while (!int.TryParse(Console.ReadLine(), out num) );
+            ///      
+            ///      Console.WriteLine(" is prime: "+ IsPrime(num));
+
+            #endregion
+
+            #region Q6
+            //Create a function named MinMaxArray,
+            //to return the minimum and maximum values stored in an array, using reference parameters
+
+          ///  int[] numbers = {100,2,3,4,5,6,7};
+          ///  int min , max ;
+          ///  MinMaxArray(ref numbers, out max, out min);
+          ///  Console.WriteLine($" max= {max}");
+          ///  Console.WriteLine($" min= {min}");
+
+
+
             #endregion
 
 
