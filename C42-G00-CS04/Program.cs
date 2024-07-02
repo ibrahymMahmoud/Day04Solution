@@ -107,8 +107,29 @@ namespace C42_G00_CS04
                 if(array[i]<min)
                     min = array[i];
             }
-        } 
 
+            //Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
+
+           
+        }
+        static int GetFactorial(int number)
+                   {
+                       int factor=1;
+                       if(number == 1 || number == 0)
+                       {
+                           return 1;
+                       }
+                       while (number > 1)
+                       {
+                           factor *= number; 
+                           number--;
+       
+                       }
+       
+                       return factor;
+       
+       
+                   }
 
         static void Main(string[] args)
         {
@@ -216,15 +237,26 @@ namespace C42_G00_CS04
             //Create a function named MinMaxArray,
             //to return the minimum and maximum values stored in an array, using reference parameters
 
-          ///  int[] numbers = {100,2,3,4,5,6,7};
-          ///  int min , max ;
-          ///  MinMaxArray(ref numbers, out max, out min);
-          ///  Console.WriteLine($" max= {max}");
-          ///  Console.WriteLine($" min= {min}");
+            ///  int[] numbers = {100,2,3,4,5,6,7};
+            ///  int min , max ;
+            ///  MinMaxArray(ref numbers, out max, out min);
+            ///  Console.WriteLine($" max= {max}");
+            ///  Console.WriteLine($" min= {min}");
 
 
 
             #endregion
+
+            #region Q7
+            //Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
+
+          ///  int num;
+          ///  do
+          ///  {
+          ///      Console.Write("Enter the number to get Factor: ");
+          ///  } while (!int.TryParse(Console.ReadLine(),out num) || num <0 );
+          ///  Console.WriteLine(" Factor =  "+GetFactorial(num) );
+          ///  #endregion
 
 
         }
