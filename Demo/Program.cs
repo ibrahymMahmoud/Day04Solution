@@ -201,27 +201,75 @@
             //Boxing : casting from datatype [value type] to data type [reference type]
             //unBoxing casting from datatype [reference type] to data type [value type]
 
-         /// object obj;
+            /// object obj;
             //declare for reference of type'OBJECT', refering to the default value of reference type null
             //this reference will allocated at stack with size = 4 bytes
             //this reference can refere to an instance of type object [or another type from "object"]
 
-          ///  obj=new object();
-          ///  obj = new string("hema");
-          ///  obj = "ibrahym";
-          ///
-          ///  obj = 'A'; // casting from char  [value type ] to object[reference type] ---> Boxing
-          ///  obj = 5;   // casting from int   [value type ] to object[reference type] ---> Boxing
-          ///  obj = 7.5; // casting from double[value type ] to object[reference type] ---> Boxing
-          ///  obj = true;// casting from bool  [value type ] to object[reference type] ---> Boxing  
-          ///             //boxing is implicitly
-          ///
-          ///
-          ///  char b = (char)obj;    // casting from object[reference type] to char  [value type ] ---> unBoxing
-          ///  int a = (int)obj;      // casting from object[reference type] to int   [value type ] ---> unBoxing
-          ///  double y= (double)obj; // casting from object[reference type] to double[value type ] ---> unBoxing
-          ///  bool flag = (bool)obj; // casting from object[reference type] to bool  [value type ] ---> unBoxing
-                                   //unboxing is explicitly // unsafe casting
+            ///  obj=new object();
+            ///  obj = new string("hema");
+            ///  obj = "ibrahym";
+            ///
+            ///  obj = 'A'; // casting from char  [value type ] to object[reference type] ---> Boxing
+            ///  obj = 5;   // casting from int   [value type ] to object[reference type] ---> Boxing
+            ///  obj = 7.5; // casting from double[value type ] to object[reference type] ---> Boxing
+            ///  obj = true;// casting from bool  [value type ] to object[reference type] ---> Boxing  
+            ///             //boxing is implicitly
+            ///
+            ///
+            ///  char b = (char)obj;    // casting from object[reference type] to char  [value type ] ---> unBoxing
+            ///  int a = (int)obj;      // casting from object[reference type] to int   [value type ] ---> unBoxing
+            ///  double y= (double)obj; // casting from object[reference type] to double[value type ] ---> unBoxing
+            ///  bool flag = (bool)obj; // casting from object[reference type] to bool  [value type ] ---> unBoxing
+            //unboxing is explicitly // unsafe casting
+
+            #endregion
+
+            #region Nullable - value types
+            // null is not a valid value for the variables of datatype:value type(struct,enum)
+            // Nullable value type : value type + allow null as a valid value
+
+            #region part 1
+            ///  //Nullable<int> Age;
+            ///  int? age; //syntax suger
+            ///  age = null;
+            ///  age = 22;
+            ///
+            ///  //Nullable<decimal> salary;
+            ///  decimal? salary = null;
+            ///
+            ///  salary = null;
+            ///  salary = 5_000; 
+            #endregion
+
+            #region part2
+         ///  int x =5;
+         ///  // x:int           -> allow integers only
+         ///  // y:Nullable<int> -> allow integers + null
+         ///  int? y = x;
+         ///
+         ///  // casting from int to Nullable<int> implicitly
+         ///  // safe casting
+         ///  //Console.WriteLine(y);
+         ///
+         ///  x =(int) y;
+         ///  //casting from Nullable<int> to int Explicitly
+         ///  //unsafe casting
+         ///
+         ///  //protective code
+         ///  if (y != null || y.HasValue) 
+         ///  {
+         ///      x = y.Value;
+         ///  }
+         ///  else
+         ///      x = 0;
+         ///
+         ///  x = y.HasValue ? y.Value : 0;
+         ///
+         ///  x = y ?? 0;  //?? --> Null coalescing Operator [synatax sugar]
+
+            #endregion 
+
 
             #endregion
         }
