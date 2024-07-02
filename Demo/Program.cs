@@ -1,5 +1,20 @@
 ﻿namespace Demo
 {
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int? age { get; set; }
+
+        public Department?Department { get; set; }    
+    }
+    public class Department 
+    {
+        public int code { get; set; }
+        public string Name { get; set; }
+    }
+
     internal class Program
     {
         // create function to print shape different number of times
@@ -192,8 +207,8 @@
             /// Console.WriteLine(Sum(5, 6,nums));//pass as array
             /// 
             //                                         0    1    2      3         4
-          Console.WriteLine("{0},{1},{2},{3},{4}","hello",45,"ahmed","mahmoud","ali");
-            Console.Read();
+            /// Console.WriteLine("{0},{1},{2},{3},{4}","hello",45,"ahmed","mahmoud","ali");
+            ///  Console.Read();
 
             #endregion
 
@@ -274,18 +289,58 @@
             #endregion
 
             #region Nullable reference types [ C# 10.0 (2021)]
-          ///  //null is a valid value for the variables of dataType:referenceType (class , interface)
-          ///  string message01 = null; // null is disable in project -- default
-          ///         message01 = null!;// null for business operator (once at this time)
-          ///  Console.WriteLine(message01);
-          ///
-          ///  string ? message02 = null; //? Nullable
-          ///  Console.WriteLine(message02);
+            ///  //null is a valid value for the variables of dataType:referenceType (class , interface)
+            ///  string message01 = null; // null is disable in project -- default
+            ///         message01 = null!;// null for business operator (once at this time)
+            ///  Console.WriteLine(message01);
+            ///
+            ///  string ? message02 = null; //? Nullable
+            ///  Console.WriteLine(message02);
 
 
 
             #endregion
 
+            #region Null propagation operator
+
+            #region Example01
+         ///   int[] ? Numbers = [1,2,3,4,5];
+         ///   int ? length = Numbers?.Length ;
+         ///
+         ///   for (int i = 0; i < Numbers.Length; i++)
+         ///       Console.WriteLine(i);
+
+
+            #endregion
+
+            #region Example02
+            ///    Employee employee = new Employee()
+            ///    {
+            ///        Id = 1,
+            ///        Name = "Test",
+            ///        age= 30,
+            ///        Department = new Department {
+            ///            code = 1,
+            ///            Name = "hr",
+            ///        }
+            ///    };
+            ///    Console.WriteLine(employee?.Department?.Name ?? "no name");
+            ///
+            ///    // instead of 
+            ///    if (employee != null) {
+            ///        if (employee.Department is not null ) {
+            ///            if (employee.Department.Name is not null )
+            ///            {
+            ///                Console.WriteLine(employee.Department.Name);
+            ///            }else
+            ///                Console.WriteLine("no name");
+            ///        }
+            ///    }
+
+            #endregion
+
+
+            #endregion
 
         }
     }
