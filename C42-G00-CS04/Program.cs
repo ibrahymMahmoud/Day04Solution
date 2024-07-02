@@ -131,6 +131,23 @@ namespace C42_G00_CS04
        
                    }
 
+        //Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string,
+        //replacing it with a different letter
+
+        static string ChangeChar(string input,  char newChar)
+        {
+            
+            char[] charArray = input.ToCharArray();
+
+            
+            charArray[0] = newChar;
+
+
+            return new string(charArray);
+
+        }
+
+
         static void Main(string[] args)
         {
             #region Q1
@@ -250,13 +267,24 @@ namespace C42_G00_CS04
             #region Q7
             //Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
 
-          ///  int num;
-          ///  do
-          ///  {
-          ///      Console.Write("Enter the number to get Factor: ");
-          ///  } while (!int.TryParse(Console.ReadLine(),out num) || num <0 );
-          ///  Console.WriteLine(" Factor =  "+GetFactorial(num) );
-          ///  #endregion
+            ///  int num;
+            ///  do
+            ///  {
+            ///      Console.Write("Enter the number to get Factor: ");
+            ///  } while (!int.TryParse(Console.ReadLine(),out num) || num <0 );
+            ///  Console.WriteLine(" Factor =  "+GetFactorial(num) );
+            #endregion
+
+            #region Q8
+            //Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string,
+            //replacing it with a different letter
+
+            string hamada = "hamada";
+            char NewChar = 'r';
+            Console.WriteLine(ChangeChar(hamada, NewChar));
+
+
+            #endregion
 
 
         }
